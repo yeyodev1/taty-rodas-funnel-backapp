@@ -1,11 +1,11 @@
 import express, { Application } from "express";
+import checkoutRouter from "./checkout.routes";
 
 function routerApi(app: Application) {
   const router = express.Router();
   app.use("/api", router);
 
-  // Register your routes here:
-  // router.use("/users", userRouter);
+  router.use("/checkout", checkoutRouter);
 }
 
 export default routerApi;

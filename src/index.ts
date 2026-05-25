@@ -1,12 +1,10 @@
-import dotenv from "dotenv";
+import "dotenv/config";
 import { createApp } from "./app";
 
 const port = process.env.PORT || 8100;
 
 async function main() {
-  dotenv.config();
-
-  const { app, server } = createApp();
+  const { server } = createApp();
 
   server.timeout = 10 * 60 * 1000;
 
@@ -16,3 +14,4 @@ async function main() {
 }
 
 main();
+
