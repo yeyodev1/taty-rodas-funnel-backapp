@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import http from "http";
+import { HttpStatusCode } from "axios";
 import routerApi from "./routes";
 import { globalErrorHandler } from "./middlewares/globalErrorHandler.middleware";
 
@@ -28,7 +29,10 @@ export function createApp() {
   app.use(express.json({ limit: "50mb" }));
 
   app.get("/", (_req, res) => {
-    res.send("Server is alive");
+    res.status(HttpStatusCode.Ok).send({
+      message: "Taty Rodas Funnel API is running successfully."
+    });
+    return;
   });
 
   routerApi(app);
