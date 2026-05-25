@@ -13,6 +13,7 @@ const ALLOWED_ORIGINS = [
   "http://localhost:8101",
   "https://testing-storybrand-frontend.bakano.ec",
   "https://tatianarodascoach.com",
+  "https://funnel-taty-rodas.netlify.app"
 ];
 
 const corsOptions: cors.CorsOptions = {
